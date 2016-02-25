@@ -44,11 +44,11 @@ void interrupt handler(void)
 	}
 	
 
-//---------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------
 void setup(void) //init
 	{
-	IRCF2=1; IRCF1=1; IRCF0=1; //8MHz internal RC oscillator
-	
+	IRCF2=1; IRCF1=1; IRCF0=1; //8MHz internal RC oscillator block  
+	                           //(Primary oscillator - external crystal 12MHz without PLL)
 	SWDTEN=0; //disable watchdog timer
 	
 	ADCON1=0b1111; //disable analog inputs
@@ -80,7 +80,7 @@ void setup(void) //init
 	}
 
 
-//---------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------
 int main(void)
 	{
 	setup();
