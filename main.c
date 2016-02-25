@@ -8,6 +8,32 @@
 #include <htc.h>
 
 
+/********************************** Config Bits for PIC18F4320 **********************************
+
+// oscillator
+__CONFIG(1, HS );
+
+// power-up timer enable  //BOR 2.0V  //disable BOR  //WDT prescaler  //disable WDT
+__CONFIG(2, PWRTEN & BORV20 & BORDIS & WDTPS512 & WDTDIS );
+
+// CCP2 multiplexed to RC1
+__CONFIG(3, CCP2RC1 );
+
+// background debugger  //low-voltage ICSP enabled  //stack full/underflow reset
+__CONFIG(4, DEBUGDIS & LVPEN & STVREN );
+
+// unprotected code
+__CONFIG(5, UNPROTECT );
+
+//write enabled
+__CONFIG(6, WRTEN );
+
+// table read unprotected 
+__CONFIG(7, TRU	);
+
+************************************************************************************************/
+
+
 void setup(void);
 
 
@@ -68,10 +94,10 @@ int main(void)
 	lcd_rect(0, 160, 132, 16, NAVY);
 	
 	lcd_rect(20, 33, 102, 62, BLACK);  //draw window
-	lcd_rect(15, 28, 104, 64, NAVY);
-	lcd_rect(17, 30, 100, 60, BLUE);
+	lcd_rect(15, 28, 104, 64, BLUE);
+	lcd_rect(17, 30, 100, 60, NAVY);
 	
-	lcd_print(27, 50, YELLOW, "Hello World!");
+	lcd_print(30, 50, YELLOW, "Hello World!");
 	
 	
 	///////////////// Display OFF ///////////////////

@@ -187,4 +187,3 @@ void lcd_rect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint16_t color);
 void lcd_pixel(uint8_t x, uint8_t y, uint16_t color);
 void lcd_char(uint8_t x, uint8_t y, uint16_t color, uint8_t sign);
 void lcd_print(uint8_t x, uint8_t y, uint16_t color, const char *string);
-
