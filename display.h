@@ -42,7 +42,7 @@
 
 // brightness of LCD Backlight //30-min. comfort  //max. tested 70 - 13V  //for 3 kHz
 #define PWM 30
-// ~20us
+// ~40us
 
 // pin for LCD power supply (circuit with TL431, output: +2.9V, 1mA)
 #define LCD_PWR_PIN   0

@@ -99,7 +99,7 @@ void lcd_rect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint16_t color)  //dra
 //-------------------------------------------------------------------------------------------------
 void lcd_pixel(uint8_t x, uint8_t y, uint16_t color)  //x - 0..131  //y - 0..175  //set pixel color
 	{
-	lcd_area( x, x, y, y );
+	lcd_area(x, x, y, y);
  	
 	lcd_data(color>>8);
 	lcd_data(color);

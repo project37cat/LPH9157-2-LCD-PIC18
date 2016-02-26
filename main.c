@@ -25,7 +25,7 @@ __CONFIG(4, DEBUGDIS & LVPEN & STVREN );
 // unprotected code
 __CONFIG(5, UNPROTECT );
 
-//write enabled
+// write enabled
 __CONFIG(6, WRTEN );
 
 // table read unprotected 
